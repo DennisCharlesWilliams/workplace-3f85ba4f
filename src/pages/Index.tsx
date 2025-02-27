@@ -132,19 +132,19 @@ const Index = () => {
             <div className={`feature-card ${isSectionVisible('features') ? 'section-fade section-fade-delay-2' : 'opacity-0'}`}>
               <CreditCard className="h-10 w-10 text-workplace-purple mb-4" />
               <h3 className="text-xl font-semibold mb-2">Expense & Benefits</h3>
-              <p className="text-gray-600 mb-4">Simple reimbursements and comprehensive benefits management.</p>
+              <p className="text-gray-600 mb-4">Reimbursement engine to set budgets for benefits</p>
               <ul className="space-y-2">
-                <li className="feature-list-item">
-                  <Check className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
-                  <span>Budgeted reimbursements</span>
-                </li>
                 <li className="feature-list-item">
                   <Check className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
                   <span>Training and development</span>
                 </li>
                 <li className="feature-list-item">
                   <Check className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
-                  <span>Configure any benefit</span>
+                  <span>Transport</span>
+                </li>
+                <li className="feature-list-item">
+                  <Check className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
+                  <span>WFH data and much more</span>
                 </li>
               </ul>
             </div>
