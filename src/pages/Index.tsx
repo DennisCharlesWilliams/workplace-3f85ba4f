@@ -100,7 +100,7 @@ const Index = () => {
       <section id="features" className={`py-16 md:py-24 bg-workplace-lightgray/50 px-4 ${isSectionVisible('features') ? 'section-fade' : 'opacity-0'}`}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Comprehensive HR Solutions</h2>
+            <h2 className="text-3xl font-bold mb-4">Scaleable HR modules to design your employee's Workhub offering</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Everything you need to manage your team and HR processes efficiently
             </p>
