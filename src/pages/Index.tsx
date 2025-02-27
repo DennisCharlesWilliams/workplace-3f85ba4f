@@ -255,7 +255,7 @@ const Index = () => {
               </div>
               
               <div className="package-card-footer">
-                <Button className="w-full text-workplace-purple hover:bg-workplace-purple/5 border-workplace-purple">
+                <Button variant="outline" className="w-full text-workplace-purple hover:bg-workplace-purple hover:text-white border-workplace-purple">
                   Select Basics
                 </Button>
               </div>
@@ -351,7 +351,7 @@ const Index = () => {
               </div>
               
               <div className="package-card-footer">
-                <Button className="w-full text-workplace-purple hover:bg-workplace-purple/5 border-workplace-purple">
+                <Button variant="outline" className="w-full text-workplace-purple hover:bg-workplace-purple hover:text-white border-workplace-purple">
                   Select Empower
                 </Button>
               </div>
@@ -370,7 +370,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col md:flex-row justify-center gap-4">
               <Button className="bg-workplace-purple hover:bg-purple-600 text-white px-8">Get Started Today</Button>
-              <Button variant="outline" className="border-workplace-purple text-workplace-purple hover:bg-workplace-purple/5">
+              <Button variant="outline" className="border-workplace-purple text-workplace-purple hover:bg-workplace-purple hover:text-white">
                 Schedule a Demo
               </Button>
             </div>
