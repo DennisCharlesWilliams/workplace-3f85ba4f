@@ -58,7 +58,15 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 md:pt-40 md:pb-24 relative overflow-hidden">
+        {/* Abstract Background Elements */}
         <div className="absolute inset-0 z-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-1/3 h-1/3 md:w-1/4 md:h-1/4 opacity-40 blur-3xl bg-workplace-softpurple rounded-full animate-pulse-glow"></div>
+          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 md:w-1/3 md:h-1/3 opacity-30 blur-3xl bg-workplace-lightblue rounded-full animate-pulse-glow" style={{ animationDelay: '2s' }}></div>
+          <img 
+            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
+            alt="Abstract Technology"
+            className="absolute top-0 right-0 w-full h-full object-cover opacity-5 mix-blend-overlay"
+          />
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-workplace-lightblue/50 via-white to-workplace-lightgreen/40"></div>
         </div>
         <div className="container mx-auto relative z-10">
@@ -102,8 +110,16 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className={`py-16 md:py-24 bg-workplace-lightgray/50 px-4 ${isSectionVisible('features') ? 'section-fade' : 'opacity-0'}`}>
-        <div className="container mx-auto">
+      <section id="features" className={`py-16 md:py-24 bg-workplace-lightgray/50 px-4 relative ${isSectionVisible('features') ? 'section-fade' : 'opacity-0'}`}>
+        {/* Abstract Background for Features */}
+        <div className="absolute inset-0 z-0 overflow-hidden opacity-20">
+          <img 
+            src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
+            alt="Abstract Pattern"
+            className="absolute top-0 right-0 w-full h-full object-cover mix-blend-overlay"
+          />
+        </div>
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Scaleable HR modules to design your employee's Workhub offering</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -200,8 +216,13 @@ const Index = () => {
       </section>
 
       {/* Packages Section */}
-      <section id="packages" className={`py-16 md:py-24 px-4 ${isSectionVisible('packages') ? 'section-fade' : 'opacity-0'}`}>
-        <div className="container mx-auto">
+      <section id="packages" className={`py-16 md:py-24 px-4 relative ${isSectionVisible('packages') ? 'section-fade' : 'opacity-0'}`}>
+        {/* Abstract Background for Packages */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
+          <div className="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-workplace-vividpurple blur-3xl opacity-20 animate-pulse-glow"></div>
+          <div className="absolute top-40 -left-20 w-80 h-80 rounded-full bg-workplace-secondarypurple blur-3xl opacity-20 animate-pulse-glow" style={{ animationDelay: '3s' }}></div>
+        </div>
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Choose Your Package</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -362,6 +383,14 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-workplace-purple/10 to-workplace-lightblue/20 relative overflow-hidden">
+        {/* Abstract Image for CTA Section */}
+        <div className="absolute inset-0 overflow-hidden opacity-10">
+          <img 
+            src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
+            alt="Abstract Technology"
+            className="absolute top-0 left-0 w-full h-full object-cover mix-blend-overlay"
+          />
+        </div>
         <div className="container mx-auto relative z-10">
           <div className="glass-panel max-w-4xl mx-auto rounded-2xl p-10 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to transform your HR processes?</h2>
@@ -379,8 +408,17 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className={`py-16 md:py-24 px-4 ${isSectionVisible('contact') ? 'section-fade' : 'opacity-0'}`}>
-        <div className="container mx-auto">
+      <section id="contact" className={`py-16 md:py-24 px-4 relative ${isSectionVisible('contact') ? 'section-fade' : 'opacity-0'}`}>
+        {/* Abstract Background for Contact Section */}
+        <div className="absolute inset-0 overflow-hidden opacity-5">
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-workplace-softpurple blur-3xl opacity-30 animate-pulse-glow" style={{ animationDelay: '1s' }}></div>
+          <img 
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
+            alt="Abstract Office"
+            className="absolute top-0 right-0 w-full h-full object-cover opacity-10 mix-blend-multiply"
+          />
+        </div>
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -439,8 +477,11 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-50 py-12 px-4 border-t border-workplace-lightgray">
-        <div className="container mx-auto">
+      <footer className="bg-gray-50 py-12 px-4 border-t border-workplace-lightgray relative">
+        <div className="absolute inset-0 overflow-hidden opacity-5">
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-workplace-secondarypurple blur-3xl opacity-10"></div>
+        </div>
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-workplace-purple to-purple-700">Workplace</h3>
