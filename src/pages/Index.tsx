@@ -64,7 +64,7 @@ const Index = () => {
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-              The Easy & Affordable HR and Benefits hub that scales with your company
+              Easy, Affordable HR & Benefits Hub that scales with your needs
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 mb-8">
