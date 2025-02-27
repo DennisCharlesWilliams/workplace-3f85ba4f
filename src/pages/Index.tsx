@@ -68,7 +68,7 @@ const Index = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 mb-8">
-              Seamless Leave Management & Expense Claims Made Simple to automate and digitise your startup in minutes
+              Seamless Leave Management & Benefit Claims - Made Simple to automate and digitise your startup in minutes
             </p>
             
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-12">
