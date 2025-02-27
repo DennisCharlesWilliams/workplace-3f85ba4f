@@ -187,12 +187,12 @@ const Index = () => {
             {/* Base Package */}
             <div className={`package-card ${isSectionVisible('packages') ? 'section-fade section-fade-delay-1' : 'opacity-0'}`}>
               <div className="package-card-header">
-                <h3 className="font-semibold text-gray-500 mb-1">Base</h3>
+                <h3 className="font-semibold text-gray-500 mb-1">Get the basics</h3>
                 <div className="mb-2">
-                  <span className="text-3xl font-bold">R99</span>
+                  <span className="text-3xl font-bold">R40</span>
                   <span className="text-gray-500 ml-1">/ month per employee</span>
                 </div>
-                <p className="text-sm text-gray-500">Essential HR functionality</p>
+                <p className="text-sm text-gray-500">Get up and running</p>
               </div>
               
               <div className="package-card-content">
@@ -230,7 +230,7 @@ const Index = () => {
               
               <div className="package-card-footer">
                 <Button className="w-full text-workplace-purple hover:bg-workplace-purple/5 border-workplace-purple">
-                  Select Base
+                  Select Basics
                 </Button>
               </div>
             </div>
@@ -242,18 +242,18 @@ const Index = () => {
               </div>
               
               <div className="package-card-header bg-workplace-purple/5">
-                <h3 className="font-semibold text-workplace-purple mb-1">Plus</h3>
+                <h3 className="font-semibold text-workplace-purple mb-1">Add benefits</h3>
                 <div className="mb-2">
-                  <span className="text-3xl font-bold">R159</span>
+                  <span className="text-3xl font-bold">R80</span>
                   <span className="text-gray-500 ml-1">/ month per employee</span>
                 </div>
-                <p className="text-sm text-gray-500">Enhanced HR with expense management</p>
+                <p className="text-sm text-gray-500">Enhance your employee experience with benefit reimbursements</p>
               </div>
               
               <div className="package-card-content">
                 <ul className="space-y-3">
                   <li className="feature-list-item font-medium text-black">
-                    <span>Everything in Base, plus:</span>
+                    <span>Everything in Basics, plus:</span>
                   </li>
                   <li className="feature-list-item">
                     <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
@@ -280,7 +280,7 @@ const Index = () => {
               
               <div className="package-card-footer">
                 <Button className="w-full bg-workplace-purple hover:bg-purple-600 text-white">
-                  Select Plus
+                  Select Benefits
                 </Button>
               </div>
             </div>
@@ -288,18 +288,18 @@ const Index = () => {
             {/* Extra Package */}
             <div className={`package-card ${isSectionVisible('packages') ? 'section-fade section-fade-delay-3' : 'opacity-0'}`}>
               <div className="package-card-header">
-                <h3 className="font-semibold text-gray-500 mb-1">Extra</h3>
+                <h3 className="font-semibold text-gray-500 mb-1">Empower employees</h3>
                 <div className="mb-2">
-                  <span className="text-3xl font-bold">R259</span>
+                  <span className="text-3xl font-bold">R120</span>
                   <span className="text-gray-500 ml-1">/ month per employee</span>
                 </div>
-                <p className="text-sm text-gray-500">Complete HR and benefits administration</p>
+                <p className="text-sm text-gray-500">Offer access to a full range of benefits to ensure your employees wellness</p>
               </div>
               
               <div className="package-card-content">
                 <ul className="space-y-3">
                   <li className="feature-list-item font-medium text-black">
-                    <span>Everything in Plus, plus:</span>
+                    <span>Everything in Benefits, plus:</span>
                   </li>
                   <li className="feature-list-item">
                     <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
@@ -326,7 +326,7 @@ const Index = () => {
               
               <div className="package-card-footer">
                 <Button className="w-full text-workplace-purple hover:bg-workplace-purple/5 border-workplace-purple">
-                  Select Extra
+                  Select Empower
                 </Button>
               </div>
             </div>
