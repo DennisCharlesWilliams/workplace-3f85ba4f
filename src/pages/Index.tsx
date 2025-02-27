@@ -278,8 +278,9 @@ const Index = () => {
               
               <div className="package-card-content">
                 <ul className="space-y-3">
-                  <li className="feature-list-item font-medium text-black">
-                    <span>Everything in Basics, plus:</span>
+                  <li className="feature-list-item text-gray-400">
+                    <CheckCircle2 className="h-4 w-4 text-gray-400 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>All Basic features, plus:</span>
                   </li>
                   <li className="feature-list-item">
                     <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
@@ -300,6 +301,10 @@ const Index = () => {
                   <li className="feature-list-item">
                     <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
                     <span>Configure any perk</span>
+                  </li>
+                  <li className="feature-list-item invisible">
+                    <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Placeholder for alignment</span>
                   </li>
                 </ul>
               </div>
@@ -324,8 +329,9 @@ const Index = () => {
               
               <div className="package-card-content">
                 <ul className="space-y-3">
-                  <li className="feature-list-item font-medium text-black">
-                    <span>Everything in Benefits, plus:</span>
+                  <li className="feature-list-item text-gray-400">
+                    <CheckCircle2 className="h-4 w-4 text-gray-400 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>All Basic & Benefits features, plus:</span>
                   </li>
                   <li className="feature-list-item">
                     <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
@@ -346,6 +352,10 @@ const Index = () => {
                   <li className="feature-list-item">
                     <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
                     <span>Employee assistance program</span>
+                  </li>
+                  <li className="feature-list-item invisible">
+                    <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Placeholder for alignment</span>
                   </li>
                 </ul>
               </div>
