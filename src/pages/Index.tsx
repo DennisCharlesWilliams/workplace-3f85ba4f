@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Check, CheckCircle2, ChevronRight, Smartphone, Globe, Clock, Calendar, CreditCard, Users, Building, FileText, Shield, Heart } from "lucide-react";
+import { Check, CheckCircle2, ChevronRight, Smartphone, Globe, Clock, Calendar, CreditCard, Users, Building, FileText, Shield, Heart, Wallet } from "lucide-react";
 
 const Index = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -106,7 +106,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Feature 1 */}
             <div className={`feature-card ${isSectionVisible('features') ? 'section-fade section-fade-delay-1' : 'opacity-0'}`}>
               <Calendar className="h-10 w-10 text-workplace-purple mb-4" />
@@ -166,6 +166,27 @@ const Index = () => {
                 <li className="feature-list-item">
                   <Check className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
                   <span>Mental health, legal & financial advice</span>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Feature 4 - New Module */}
+            <div className={`feature-card ${isSectionVisible('features') ? 'section-fade section-fade-delay-4' : 'opacity-0'}`}>
+              <Wallet className="h-10 w-10 text-workplace-purple mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Holistic array of benefits</h3>
+              <p className="text-gray-600 mb-4">Give your employees access to personalised benefit origination and administration.</p>
+              <ul className="space-y-2">
+                <li className="feature-list-item">
+                  <Check className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
+                  <span>Savings and Retirement</span>
+                </li>
+                <li className="feature-list-item">
+                  <Check className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
+                  <span>Medical Aid and Dr consultations</span>
+                </li>
+                <li className="feature-list-item">
+                  <Check className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
+                  <span>Wellness and Mental health access</span>
                 </li>
               </ul>
             </div>
