@@ -119,11 +119,11 @@ const Index = () => {
                 </li>
                 <li className="feature-list-item">
                   <Check className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
-                  <span>Self service for employees</span>
+                  <span>Self service with live accrual</span>
                 </li>
                 <li className="feature-list-item">
                   <Check className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
-                  <span>Endlessly configurable</span>
+                  <span>Integrated Approvals, admin and reporting</span>
                 </li>
               </ul>
             </div>
