@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -454,7 +453,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-gray-50 py-12 px-4 border-t border-workplace-lightgray">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-workplace-purple to-purple-700">Workplace</h3>
               <p className="text-gray-600 mt-4">The easy and affordable HR and benefits hub that scales with your company.</p>
@@ -469,45 +468,14 @@ const Index = () => {
                 <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Employee Support</a></li>
               </ul>
             </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-600">
-                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">About Us</a></li>
-                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Careers</a></li>
-                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Blog</a></li>
-                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-gray-600">
-                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Privacy Policy</a></li>
-                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Terms of Service</a></li>
-                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Cookie Policy</a></li>
-              </ul>
-            </div>
           </div>
           
           <Separator className="my-8" />
           
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex justify-center">
             <p className="text-gray-500 text-sm">
               © {new Date().getFullYear()} Workplace. All rights reserved.
             </p>
-            
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="mailto:dennis@mybento.net" className="text-gray-400 hover:text-workplace-purple transition-colors">
-                Twitter
-              </a>
-              <a href="mailto:dennis@mybento.net" className="text-gray-400 hover:text-workplace-purple transition-colors">
-                LinkedIn
-              </a>
-              <a href="mailto:dennis@mybento.net" className="text-gray-400 hover:text-workplace-purple transition-colors">
-                Facebook
-              </a>
-            </div>
           </div>
         </div>
       </footer>
