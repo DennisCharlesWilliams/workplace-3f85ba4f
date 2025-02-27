@@ -106,11 +106,11 @@
 
 @layer components {
   .feature-card {
-    @apply relative overflow-hidden border border-transparent hover:border-workplace-purple/20 shadow-sm hover:shadow transition-all duration-300 ease-in-out rounded-xl p-6 bg-white;
+    @apply relative overflow-hidden border border-workplace-purple/20 hover:border-workplace-purple/30 shadow-sm hover:shadow-md transition-all duration-300 ease-in-out rounded-xl p-6 bg-gradient-to-b from-white to-workplace-softpurple/10;
   }
   
   .package-card {
-    @apply relative overflow-hidden cursor-pointer flex flex-col h-full border border-workplace-lightgray shadow-sm hover:shadow-md hover:border-workplace-purple/30 transition-all duration-300 ease-in-out rounded-xl bg-white;
+    @apply relative overflow-hidden cursor-pointer flex flex-col h-full border border-workplace-purple/20 shadow-sm hover:shadow-md hover:border-workplace-purple/30 transition-all duration-300 ease-in-out rounded-xl bg-white;
   }
   
   .package-card-header {
@@ -148,5 +148,25 @@
   
   .glass-panel {
     @apply backdrop-blur-sm bg-white/80 border border-white/20 shadow-md;
+  }
+  
+  .claude-gradient {
+    @apply bg-gradient-to-r from-workplace-purple to-workplace-vividpurple text-transparent bg-clip-text;
+  }
+  
+  .claude-button {
+    @apply bg-workplace-purple hover:bg-workplace-vividpurple text-white transition-all duration-300;
+  }
+  
+  .claude-container {
+    @apply relative z-10 overflow-hidden;
+  }
+  
+  .abstract-shape {
+    @apply absolute pointer-events-none opacity-60 blur-xl;
+  }
+  
+  .abstract-bg {
+    @apply absolute inset-0 bg-gradient-to-b from-workplace-darkpurple/70 to-workplace-darkcharcoal/90 -z-10;
   }
 }

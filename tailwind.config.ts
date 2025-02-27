@@ -68,7 +68,15 @@ export default {
 					lightgreen: '#F2FCE2',
 					lightblue: '#D3E4FD',
 					gray: '#8E9196',
-					lightgray: '#F5F5F7'
+					lightgray: '#F5F5F7',
+					darkpurple: '#1A1F2C',
+					darkcharcoal: '#221F26',
+					secondarypurple: '#7E69AB',
+					tertiarypurple: '#6E59A5',
+					softpurple: '#E5DEFF',
+					softgray: '#F1F0FB',
+					vividpurple: '#8B5CF6',
+					magentapink: '#D946EF'
 				}
 			},
 			borderRadius: {
@@ -110,13 +118,38 @@ export default {
 					to: {
 						opacity: '1'
 					}
-				}
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						opacity: '1',
+						transform: 'scale(1)',
+					},
+					'50%': {
+						opacity: '0.8',
+						transform: 'scale(1.05)',
+					},
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)',
+					},
+					'50%': {
+						transform: 'translateY(-10px)',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out forwards',
-				'fade-in-slow': 'fade-in-slow 1.2s ease-out forwards'
+				'fade-in-slow': 'fade-in-slow 1.2s ease-out forwards',
+				'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite',
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'abstract-1': 'url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80")',
+				'abstract-2': 'url("https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80")',
 			}
 		}
 	},
