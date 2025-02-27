@@ -50,7 +50,7 @@ const Index = () => {
               <a href="#contact" className="text-sm font-medium text-gray-600 hover:text-workplace-purple transition-colors">Contact Us</a>
             </nav>
             <div>
-              <Button className="bg-workplace-purple hover:bg-purple-600 transition-colors text-white">Get Started</Button>
+              <Button className="bg-workplace-purple hover:bg-purple-600 transition-colors text-white" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>Get Started</Button>
             </div>
           </div>
         </div>
@@ -72,11 +72,11 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-12">
-              <Button className="w-full md:w-auto bg-workplace-purple hover:bg-purple-600 transition-all text-white px-8 py-6 text-lg rounded-xl">
+              <Button className="w-full md:w-auto bg-workplace-purple hover:bg-purple-600 transition-all text-white px-8 py-6 text-lg rounded-xl" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>
                 Start Free Trial
               </Button>
               
-              <Button variant="outline" className="w-full md:w-auto border-workplace-purple text-workplace-purple hover:bg-workplace-purple/5 px-8 py-6 text-lg rounded-xl">
+              <Button variant="outline" className="w-full md:w-auto border-workplace-purple text-workplace-purple hover:bg-workplace-purple/5 px-8 py-6 text-lg rounded-xl" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>
                 Book a Demo <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -255,7 +255,7 @@ const Index = () => {
               </div>
               
               <div className="package-card-footer">
-                <Button variant="outline" className="w-full text-workplace-purple hover:bg-workplace-purple hover:text-white border-workplace-purple">
+                <Button variant="outline" className="w-full text-workplace-purple hover:bg-workplace-purple hover:text-white border-workplace-purple" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>
                   Select Basics
                 </Button>
               </div>
@@ -310,7 +310,7 @@ const Index = () => {
               </div>
               
               <div className="package-card-footer">
-                <Button className="w-full bg-workplace-purple hover:bg-purple-600 text-white">
+                <Button className="w-full bg-workplace-purple hover:bg-purple-600 text-white" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>
                   Select Benefits
                 </Button>
               </div>
@@ -361,7 +361,7 @@ const Index = () => {
               </div>
               
               <div className="package-card-footer">
-                <Button variant="outline" className="w-full text-workplace-purple hover:bg-workplace-purple hover:text-white border-workplace-purple">
+                <Button variant="outline" className="w-full text-workplace-purple hover:bg-workplace-purple hover:text-white border-workplace-purple" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>
                   Select Empower
                 </Button>
               </div>
@@ -379,8 +379,8 @@ const Index = () => {
               Join hundreds of South African businesses already using Workplace to simplify their HR and benefits management.
             </p>
             <div className="flex flex-col md:flex-row justify-center gap-4">
-              <Button className="bg-workplace-purple hover:bg-purple-600 text-white px-8">Get Started Today</Button>
-              <Button variant="outline" className="border-workplace-purple text-workplace-purple hover:bg-workplace-purple hover:text-white">
+              <Button className="bg-workplace-purple hover:bg-purple-600 text-white px-8" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>Get Started Today</Button>
+              <Button variant="outline" className="border-workplace-purple text-workplace-purple hover:bg-workplace-purple hover:text-white" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>
                 Schedule a Demo
               </Button>
             </div>
@@ -399,7 +399,10 @@ const Index = () => {
           </div>
           
           <div className="max-w-lg mx-auto bg-white rounded-xl shadow-sm p-8 border border-workplace-lightgray">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={(e) => {
+              e.preventDefault();
+              window.location.href = 'mailto:dennis@mybento.net';
+            }}>
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium">Your Name</label>
                 <input
@@ -440,7 +443,7 @@ const Index = () => {
                 ></textarea>
               </div>
               
-              <Button className="w-full bg-workplace-purple hover:bg-purple-600 text-white py-6">
+              <Button type="submit" className="w-full bg-workplace-purple hover:bg-purple-600 text-white py-6">
                 Send Message
               </Button>
             </form>
@@ -460,29 +463,29 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Features</h4>
               <ul className="space-y-2 text-gray-600">
-                <li><a href="#" className="hover:text-workplace-purple transition-colors">Leave Management</a></li>
-                <li><a href="#" className="hover:text-workplace-purple transition-colors">Expense Claims</a></li>
-                <li><a href="#" className="hover:text-workplace-purple transition-colors">Benefits Administration</a></li>
-                <li><a href="#" className="hover:text-workplace-purple transition-colors">Employee Support</a></li>
+                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Leave Management</a></li>
+                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Expense Claims</a></li>
+                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Benefits Administration</a></li>
+                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Employee Support</a></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-600">
-                <li><a href="#" className="hover:text-workplace-purple transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-workplace-purple transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-workplace-purple transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-workplace-purple transition-colors">Contact</a></li>
+                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">About Us</a></li>
+                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Careers</a></li>
+                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Blog</a></li>
+                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Contact</a></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
               <ul className="space-y-2 text-gray-600">
-                <li><a href="#" className="hover:text-workplace-purple transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-workplace-purple transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-workplace-purple transition-colors">Cookie Policy</a></li>
+                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Privacy Policy</a></li>
+                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Terms of Service</a></li>
+                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Cookie Policy</a></li>
               </ul>
             </div>
           </div>
@@ -495,13 +498,13 @@ const Index = () => {
             </p>
             
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-workplace-purple transition-colors">
+              <a href="mailto:dennis@mybento.net" className="text-gray-400 hover:text-workplace-purple transition-colors">
                 Twitter
               </a>
-              <a href="#" className="text-gray-400 hover:text-workplace-purple transition-colors">
+              <a href="mailto:dennis@mybento.net" className="text-gray-400 hover:text-workplace-purple transition-colors">
                 LinkedIn
               </a>
-              <a href="#" className="text-gray-400 hover:text-workplace-purple transition-colors">
+              <a href="mailto:dennis@mybento.net" className="text-gray-400 hover:text-workplace-purple transition-colors">
                 Facebook
               </a>
             </div>
