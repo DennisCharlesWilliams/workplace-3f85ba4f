@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Check, CheckCircle2, ChevronRight, Smartphone, Globe, Clock, Calendar, CreditCard, Users, Building, FileText, Shield, Heart, Wallet } from "lucide-react";
+import { Check, CheckCircle2, ChevronRight, Smartphone, Globe, Clock, Calendar, CreditCard, Users, Building, FileText, Shield, Heart, Wallet, Zap } from "lucide-react";
 
 const Index = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -90,6 +90,11 @@ const Index = () => {
               <div className="flex items-center">
                 <Globe className="h-5 w-5 mr-2 text-workplace-purple" />
                 <span>Built for South African Businesses</span>
+              </div>
+              
+              <div className="flex items-center">
+                <Zap className="h-5 w-5 mr-2 text-workplace-purple" />
+                <span>Cut 90% of manual effort</span>
               </div>
             </div>
           </div>
