@@ -218,7 +218,7 @@ const Index = () => {
                   <span className="text-3xl font-bold">R45</span>
                   <span className="text-gray-500 ml-1">/ month per employee</span>
                 </div>
-                <p className="text-sm text-gray-500">Get up and running</p>
+                <p className="text-sm text-gray-500">Get up and running fast with all the basics you need to save on time, effort and manual mistakes</p>
               </div>
               
               <div className="package-card-content">
@@ -338,7 +338,7 @@ const Index = () => {
                   <span className="text-3xl font-bold">R200</span>
                   <span className="text-gray-500 ml-1">/ month per employee</span>
                 </div>
-                <p className="text-sm text-gray-500">Offer access to a full range of benefits to ensure your employees wellness</p>
+                <p className="text-sm text-gray-500">Offer access to a full range of holistic, modern benefits that ensure your employees wellness</p>
               </div>
               
               <div className="package-card-content">
