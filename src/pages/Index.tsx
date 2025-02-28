@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -63,11 +64,11 @@ const Index = () => {
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-              Easy, Affordable HR & Benefits Hub that scales with your needs
+              Simple, Fast & Affordable Leave & Benefits for Growing Teams
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 mb-8">
-              Seamless Leave Management & Benefit Claims - Made Simple to automate and digitise your startup in minutes
+              The no-fuss solution to streamline leave and benefit claims - get started today with minimal effort.
             </p>
             
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-12">
