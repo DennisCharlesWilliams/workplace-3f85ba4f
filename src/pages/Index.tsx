@@ -77,13 +77,6 @@ const Index = () => {
     setActiveTestimonial(index);
   };
 
-  // Custom hand-illustrated style icon renderer
-  const HandDrawnIcon = ({ children, className = "" }) => (
-    <div className={`hand-drawn-icon ${className}`}>
-      {children}
-    </div>
-  );
-
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -136,7 +129,7 @@ const Index = () => {
             
             {/* Right Column - Image */}
             <div className="order-2 md:order-2 flex justify-center md:justify-end">
-              <div className="w-52 md:w-72 lg:w-80">
+              <div className="w-64 md:w-96 lg:w-[450px]">
                 <img 
                   src="/lovable-uploads/1b85f901-bd2c-4c9d-8fbb-ca8796b44396.png" 
                   alt="Person with heart illustration" 
@@ -148,37 +141,17 @@ const Index = () => {
           
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-gray-600 mt-4">
             <div className="flex items-center">
-              <div className="hand-drawn-icon text-workplace-maroon mr-2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated">
-                  <path d="M7 19c-1.5-1.5-3-4.5-3-8 0-5 3-7 6-7s6 2 6 7c0 3.5-1.5 6.5-3 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M10 5c1 2 2 5 2 7 0 2-1 5-2 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M6 9h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M6 15h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
+              <Smartphone className="h-5 w-5 mr-2 text-workplace-maroon" />
               <span>Mobile friendly</span>
             </div>
             
             <div className="flex items-center">
-              <div className="hand-drawn-icon text-workplace-maroon mr-2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated">
-                  <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M12 3v6l3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M3 12h3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M18 12h3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M5 5l3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M16 16l3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
+              <Globe className="h-5 w-5 mr-2 text-workplace-maroon" />
               <span>Built for South African Businesses</span>
             </div>
             
             <div className="flex items-center">
-              <div className="hand-drawn-icon text-workplace-maroon mr-2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated">
-                  <path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
+              <Zap className="h-5 w-5 mr-2 text-workplace-maroon" />
               <span>Cut 90% of manual effort</span>
             </div>
           </div>
@@ -198,45 +171,20 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Feature 1 */}
             <div className={`feature-card ${isSectionVisible('features') ? 'section-fade section-fade-delay-1' : 'opacity-0'}`}>
-              <div className="hand-drawn-icon text-workplace-maroon mb-4">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-10 h-10">
-                  <rect x="4" y="5" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M16 3v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M8 3v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M4 11h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M8 15h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M12 15h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M16 15h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M8 19h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M12 19h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M16 19h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
+              <Calendar className="h-10 w-10 text-workplace-maroon mb-4" />
               <h3 className="text-xl font-semibold mb-2">Leave Management</h3>
               <p className="text-gray-600 mb-4">Streamlined leave tracking with payroll integration and self-service options.</p>
               <ul className="space-y-2">
                 <li className="feature-list-item">
-                  <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                      <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
+                  <Check className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                   <span>Payroll integrated</span>
                 </li>
                 <li className="feature-list-item">
-                  <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                      <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
+                  <Check className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                   <span>Self service with live accrual</span>
                 </li>
                 <li className="feature-list-item">
-                  <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                      <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
+                  <Check className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                   <span>Integrated Approvals, admin and reporting</span>
                 </li>
               </ul>
@@ -244,39 +192,20 @@ const Index = () => {
             
             {/* Feature 2 */}
             <div className={`feature-card ${isSectionVisible('features') ? 'section-fade section-fade-delay-2' : 'opacity-0'}`}>
-              <div className="hand-drawn-icon text-workplace-maroon mb-4">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-10 h-10">
-                  <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M3 10h18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M7 15h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M11 15h2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
+              <CreditCard className="h-10 w-10 text-workplace-maroon mb-4" />
               <h3 className="text-xl font-semibold mb-2">Expense & Benefits</h3>
               <p className="text-gray-600 mb-4">Reimbursement engine to set budgets for benefits</p>
               <ul className="space-y-2">
                 <li className="feature-list-item">
-                  <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                      <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
+                  <Check className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                   <span>Training and development</span>
                 </li>
                 <li className="feature-list-item">
-                  <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                      <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
+                  <Check className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                   <span>Transport</span>
                 </li>
                 <li className="feature-list-item">
-                  <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                      <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
+                  <Check className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                   <span>WFH data and much more</span>
                 </li>
               </ul>
@@ -284,36 +213,20 @@ const Index = () => {
             
             {/* Feature 3 */}
             <div className={`feature-card ${isSectionVisible('features') ? 'section-fade section-fade-delay-3' : 'opacity-0'}`}>
-              <div className="hand-drawn-icon text-workplace-maroon mb-4">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-10 h-10">
-                  <path d="M19.5 12.572L12 20l-7.5-7.428m0 0A5 5 0 1112 4.006a5 5 0 017.5 8.566" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
+              <Heart className="h-10 w-10 text-workplace-maroon mb-4" />
               <h3 className="text-xl font-semibold mb-2">Employee Support</h3>
               <p className="text-gray-600 mb-4">Comprehensive tools to support employee wellbeing and growth.</p>
               <ul className="space-y-2">
                 <li className="feature-list-item">
-                  <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                      <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
+                  <Check className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                   <span>Employee assistance program</span>
                 </li>
                 <li className="feature-list-item">
-                  <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                      <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
+                  <Check className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                   <span>Emergency hotline</span>
                 </li>
                 <li className="feature-list-item">
-                  <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                      <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
+                  <Check className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                   <span>Mental health, legal & financial advice</span>
                 </li>
               </ul>
@@ -321,39 +234,20 @@ const Index = () => {
             
             {/* Feature 4 - New Module */}
             <div className={`feature-card ${isSectionVisible('features') ? 'section-fade section-fade-delay-4' : 'opacity-0'}`}>
-              <div className="hand-drawn-icon text-workplace-maroon mb-4">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-10 h-10">
-                  <path d="M4 4a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M9 14l-3 3v3a2 2 0 002 2h8a2 2 0 002-2v-3l-3-3H9z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M7 6h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M12 18h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
+              <Wallet className="h-10 w-10 text-workplace-maroon mb-4" />
               <h3 className="text-xl font-semibold mb-2">Holistic array of benefits</h3>
               <p className="text-gray-600 mb-4">Give your employees access to personalised benefit origination and administration.</p>
               <ul className="space-y-2">
                 <li className="feature-list-item">
-                  <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                      <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
+                  <Check className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                   <span>Savings and Retirement</span>
                 </li>
                 <li className="feature-list-item">
-                  <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                      <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
+                  <Check className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                   <span>Medical Aid and Dr consultations</span>
                 </li>
                 <li className="feature-list-item">
-                  <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                      <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
+                  <Check className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                   <span>Wellness and Mental health access</span>
                 </li>
               </ul>
@@ -382,19 +276,11 @@ const Index = () => {
                   <div key={index} className="w-full flex-shrink-0 px-4">
                     <div className="bg-white rounded-xl shadow-sm p-8 border border-workplace-beige">
                       <div className="flex items-start mb-6">
-                        <div className="hand-drawn-icon text-workplace-maroon opacity-40 mr-4">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-10 h-10">
-                            <path d="M7 16.3c-.8.5-1.5.3-2-.4-1.6-2.2-2-6 .5-11l.3-.5h3.7L8 9c0 .5.3 1 .8 1.5.6.5 1 1.3 1 2.1 0 1-.3 1.8-.9 2.4-.5.6-1.3.9-2 .9zm9.5 0c-.8.5-1.5.3-2-.4-1.6-2.2-2-6 .5-11l.3-.5h3.7L17.5 9c0 .5.3 1 .8 1.5.6.5 1 1.3 1 2.1 0 1-.3 1.8-.9 2.4-.5.6-1.2.9-2 .9z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                          </svg>
-                        </div>
+                        <Quote className="h-10 w-10 text-workplace-maroon opacity-40 mr-4" />
                         <div className="flex flex-col">
                           <div className="flex mb-2">
                             {[...Array(5)].map((_, i) => (
-                              <div key={i} className="hand-drawn-icon text-yellow-400">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-5 h-5">
-                                  <path d="M12.5 3l1.7 5.7h5.8l-4.7 3.8 1.8 5.7-4.6-3.4-4.6 3.4 1.8-5.7-4.7-3.8h5.8L12.5 3z" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                              </div>
+                              <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
                             ))}
                           </div>
                         </div>
@@ -429,11 +315,7 @@ const Index = () => {
                 className="rounded-full border-workplace-maroon text-workplace-maroon"
                 onClick={prevTestimonial}
               >
-                <div className="hand-drawn-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-6 h-6">
-                    <path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
+                <ChevronLeft className="h-6 w-6" />
               </Button>
               
               <div className="flex space-x-2">
@@ -454,11 +336,7 @@ const Index = () => {
                 className="rounded-full border-workplace-maroon text-workplace-maroon"
                 onClick={nextTestimonial}
               >
-                <div className="hand-drawn-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-6 h-6">
-                    <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
+                <ChevronRight className="h-6 w-6" />
               </Button>
             </div>
           </div>
@@ -490,66 +368,31 @@ const Index = () => {
               <div className="package-card-content">
                 <ul className="space-y-3">
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Self-service leave management</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Payroll integration</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Employee onboarding and offboarding</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Employee and team information</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Employee remuneration and payslips</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Employee vault for documentation</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>HR policies management</span>
                   </li>
                 </ul>
@@ -583,84 +426,39 @@ const Index = () => {
               <div className="package-card-content">
                 <ul className="space-y-3">
                   <li className="feature-list-item text-gray-400">
-                    <div className="hand-drawn-icon text-gray-400 mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-gray-400 mr-2 flex-shrink-0 mt-0.5" />
                     <span>All Basic features, plus:</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Reimbursement and claims engine</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Budgeted reimbursements</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Training and development</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Data and communications</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Travel & Transport</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Office Supplies</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Meals & Entertainment</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Configure any perk</span>
                   </li>
                 </ul>
@@ -690,75 +488,35 @@ const Index = () => {
               <div className="package-card-content">
                 <ul className="space-y-3">
                   <li className="feature-list-item text-gray-400">
-                    <div className="hand-drawn-icon text-gray-400 mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-gray-400 mr-2 flex-shrink-0 mt-0.5" />
                     <span>All Basic & Benefits features, plus:</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Benefits origination and administration</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Retirement and savings</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Medical aid and doctor consultations</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Insurance</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Mental Wellbeing</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Physical Wellness</span>
                   </li>
                   <li className="feature-list-item">
-                    <div className="hand-drawn-icon text-workplace-maroon mr-2 flex-shrink-0 mt-0.5">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-illustrated w-4 h-4">
-                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-workplace-maroon mr-2 flex-shrink-0 mt-0.5" />
                     <span>Employee assistance program</span>
                   </li>
                 </ul>
@@ -932,37 +690,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-
-      {/* Animation styles */ }
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          .hand-illustrated {
-            stroke-dasharray: 100;
-            animation: sketch 2s ease-in-out forwards;
-          }
-          
-          @keyframes sketch {
-            from {
-              stroke-dashoffset: 100;
-            }
-            to {
-              stroke-dashoffset: 0;
-            }
-          }
-          
-          .hand-drawn-icon svg {
-            filter: url(#marker-effect);
-          }
-        `
-      }} />
-      
-      {/* SVG Filter for hand-drawn effect */}
-      <svg width="0" height="0" style={{ position: 'absolute' }}>
-        <filter id="marker-effect" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" colorInterpolationFilters="linearRGB">
-          <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="1" seed="1" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence>
-          <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="1" xChannelSelector="R" yChannelSelector="G" x="0%" y="0%" width="100%" height="100%" result="displacementMap"></feDisplacementMap>
-        </filter>
-      </svg>
     </div>
   );
 };
