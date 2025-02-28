@@ -1,14 +1,43 @@
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Check, CheckCircle2, ChevronRight, Smartphone, Globe, Clock, Calendar, CreditCard, Users, Building, FileText, Shield, Heart, Wallet, Zap } from "lucide-react";
+import { Check, CheckCircle2, ChevronRight, Smartphone, Globe, Clock, Calendar, CreditCard, Users, Building, FileText, Shield, Heart, Wallet, Zap, ChevronLeft, Quote, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
   const [scrolled, setScrolled] = useState(false);
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const testimonialRef = useRef<HTMLDivElement>(null);
+  
+  const testimonials = [
+    {
+      quote: "Workplace has completely transformed our leave management! What used to take hours of back-and-forth emails is now handled in minutes. The automation has saved us so much time, and the cost is unbeatable for the value it provides.",
+      author: "Sarah M.",
+      position: "HR Manager",
+      company: "Tech Startup"
+    },
+    {
+      quote: "As a small business, we needed an HR solution that didn't break the bank but still made life easier. Workplace was the perfect fit—fast to set up, simple to use, and it keeps our team organized without any admin headaches.",
+      author: "James T.",
+      position: "Founder",
+      company: "Digital Agency"
+    },
+    {
+      quote: "We were drowning in spreadsheets trying to track leave and benefits. Workplace streamlined everything overnight! We now have a clear system in place, and the cost savings from reducing errors and manual work have been incredible.",
+      author: "Priya K.",
+      position: "Operations Director",
+      company: "E-commerce Business"
+    },
+    {
+      quote: "Managing leave requests used to be a nightmare—constant follow-ups, lost emails, and payroll mismatches. Workplace took all of that stress away. It's easy, affordable, and has given us back precious hours each month!",
+      author: "David L.",
+      position: "People & Culture Lead",
+      company: "Growing SaaS Company"
+    }
+  ];
   
   useEffect(() => {
     const handleScroll = () => {
@@ -36,6 +65,18 @@ const Index = () => {
   
   const isSectionVisible = (id: string) => visibleSections.has(id);
 
+  const nextTestimonial = () => {
+    setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const goToTestimonial = (index: number) => {
+    setActiveTestimonial(index);
+  };
+
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -48,6 +89,7 @@ const Index = () => {
             <nav className="hidden md:flex space-x-8">
               <a href="#features" className="text-sm font-medium text-gray-600 hover:text-workplace-purple transition-colors">Features</a>
               <a href="#packages" className="text-sm font-medium text-gray-600 hover:text-workplace-purple transition-colors">Packages</a>
+              <a href="#testimonials" className="text-sm font-medium text-gray-600 hover:text-workplace-purple transition-colors">Testimonials</a>
               <a href="#contact" className="text-sm font-medium text-gray-600 hover:text-workplace-purple transition-colors">Contact Us</a>
             </nav>
             <div>
@@ -200,8 +242,95 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section id="testimonials" className={`py-16 md:py-24 px-4 ${isSectionVisible('testimonials') ? 'section-fade' : 'opacity-0'}`}>
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">What Our Customers Say</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Hear from businesses who've transformed their HR processes with Workplace
+            </p>
+          </div>
+          
+          <div className="relative max-w-4xl mx-auto" ref={testimonialRef}>
+            <div className="overflow-hidden">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${activeTestimonial * 100}%)` }}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <div key={index} className="w-full flex-shrink-0 px-4">
+                    <div className="bg-white rounded-xl shadow-sm p-8 border border-workplace-lightgray">
+                      <div className="flex items-start mb-6">
+                        <Quote className="h-10 w-10 text-workplace-purple opacity-40 mr-4" />
+                        <div className="flex flex-col">
+                          <div className="flex mb-2">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <p className="text-lg leading-relaxed mb-6 text-gray-700 italic">
+                        "{testimonial.quote}"
+                      </p>
+                      
+                      <div className="flex items-center">
+                        <div className="bg-workplace-purple/20 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                          <span className="text-workplace-purple font-semibold text-lg">
+                            {testimonial.author.charAt(0)}
+                          </span>
+                        </div>
+                        <div>
+                          <p className="font-medium text-gray-900">{testimonial.author}</p>
+                          <p className="text-sm text-gray-600">{testimonial.position}, {testimonial.company}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Carousel Navigation */}
+            <div className="flex justify-between items-center mt-8">
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border-workplace-purple text-workplace-purple"
+                onClick={prevTestimonial}
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </Button>
+              
+              <div className="flex space-x-2">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`w-3 h-3 rounded-full ${
+                      activeTestimonial === index ? 'bg-workplace-purple' : 'bg-gray-300'
+                    }`}
+                    onClick={() => goToTestimonial(index)}
+                  />
+                ))}
+              </div>
+              
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border-workplace-purple text-workplace-purple"
+                onClick={nextTestimonial}
+              >
+                <ChevronRight className="h-6 w-6" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Packages Section */}
-      <section id="packages" className={`py-16 md:py-24 px-4 ${isSectionVisible('packages') ? 'section-fade' : 'opacity-0'}`}>
+      <section id="packages" className={`py-16 md:py-24 px-4 bg-workplace-lightgray/30 ${isSectionVisible('packages') ? 'section-fade' : 'opacity-0'}`}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Choose Your Package</h2>
