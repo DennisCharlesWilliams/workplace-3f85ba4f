@@ -400,7 +400,7 @@ const Index = () => {
           <div className="glass-panel max-w-4xl mx-auto rounded-2xl p-10 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to transform your HR processes?</h2>
             <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
-              Join hundreds of South African businesses already using Workplace to simplify their HR and benefits management.
+              Join progressive South African businesses already using Workplace to simplify their HR and benefits management.
             </p>
             <div className="flex flex-col md:flex-row justify-center gap-4">
               <Button className="bg-workplace-purple hover:bg-purple-600 text-white px-8" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>Get Started Today</Button>
