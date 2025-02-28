@@ -933,25 +933,28 @@ const Index = () => {
         </div>
       </footer>
 
-      <style jsx global>{`
-        .hand-illustrated {
-          stroke-dasharray: 100;
-          animation: sketch 2s ease-in-out forwards;
-        }
-        
-        @keyframes sketch {
-          from {
-            stroke-dashoffset: 100;
+      {/* Animation styles */ }
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .hand-illustrated {
+            stroke-dasharray: 100;
+            animation: sketch 2s ease-in-out forwards;
           }
-          to {
-            stroke-dashoffset: 0;
+          
+          @keyframes sketch {
+            from {
+              stroke-dashoffset: 100;
+            }
+            to {
+              stroke-dashoffset: 0;
+            }
           }
-        }
-        
-        .hand-drawn-icon svg {
-          filter: url(#marker-effect);
-        }
-      `}</style>
+          
+          .hand-drawn-icon svg {
+            filter: url(#marker-effect);
+          }
+        `
+      }} />
       
       {/* SVG Filter for hand-drawn effect */}
       <svg width="0" height="0" style={{ position: 'absolute' }}>
