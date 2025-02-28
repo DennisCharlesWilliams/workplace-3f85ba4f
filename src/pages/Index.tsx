@@ -110,9 +110,18 @@ const Index = () => {
               Simple, Fast & Affordable Leave & Benefits for Growing Teams
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-600 mb-8">
+            <p className="text-lg md:text-xl text-gray-600 mb-6">
               The no-fuss solution to streamline leave and benefit claims - get started today with minimal effort.
             </p>
+            
+            {/* Added image here */}
+            <div className="mx-auto w-60 md:w-72 mb-8">
+              <img 
+                src="/lovable-uploads/1b85f901-bd2c-4c9d-8fbb-ca8796b44396.png" 
+                alt="Person with heart illustration" 
+                className="w-full h-auto"
+              />
+            </div>
             
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-12">
               <Button className="w-full md:w-auto bg-workplace-maroon hover:bg-workplace-maroon/90 transition-all text-white px-8 py-6 text-lg rounded-xl" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>
