@@ -215,7 +215,7 @@ const Index = () => {
               <div className="package-card-header">
                 <h3 className="font-semibold text-gray-500 mb-1">Get the basics</h3>
                 <div className="mb-2">
-                  <span className="text-3xl font-bold">R40</span>
+                  <span className="text-3xl font-bold">R45</span>
                   <span className="text-gray-500 ml-1">/ month per employee</span>
                 </div>
                 <p className="text-sm text-gray-500">Get up and running</p>
@@ -252,6 +252,9 @@ const Index = () => {
                     <span>HR policies management</span>
                   </li>
                 </ul>
+                <div className="text-xs text-gray-500 mt-4 text-center">
+                  VAT inclusive
+                </div>
               </div>
               
               <div className="package-card-footer">
@@ -270,7 +273,7 @@ const Index = () => {
               <div className="package-card-header bg-workplace-purple/5">
                 <h3 className="font-semibold text-workplace-purple mb-1">Add benefits</h3>
                 <div className="mb-2">
-                  <span className="text-3xl font-bold">R80</span>
+                  <span className="text-3xl font-bold">R90</span>
                   <span className="text-gray-500 ml-1">/ month per employee</span>
                 </div>
                 <p className="text-sm text-gray-500">Enhance your employee experience with benefit reimbursements</p>
@@ -315,6 +318,9 @@ const Index = () => {
                     <span>Configure any perk</span>
                   </li>
                 </ul>
+                <div className="text-xs text-gray-500 mt-4 text-center">
+                  VAT inclusive
+                </div>
               </div>
               
               <div className="package-card-footer">
@@ -329,7 +335,7 @@ const Index = () => {
               <div className="package-card-header">
                 <h3 className="font-semibold text-gray-500 mb-1">Empower employees</h3>
                 <div className="mb-2">
-                  <span className="text-3xl font-bold">R120</span>
+                  <span className="text-3xl font-bold">R200</span>
                   <span className="text-gray-500 ml-1">/ month per employee</span>
                 </div>
                 <p className="text-sm text-gray-500">Offer access to a full range of benefits to ensure your employees wellness</p>
@@ -359,9 +365,23 @@ const Index = () => {
                   </li>
                   <li className="feature-list-item">
                     <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Mental Wellbeing</span>
+                  </li>
+                  <li className="feature-list-item">
+                    <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Physical Wellness</span>
+                  </li>
+                  <li className="feature-list-item">
+                    <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
                     <span>Employee assistance program</span>
                   </li>
                 </ul>
+                <div className="text-xs text-gray-500 mt-4 text-center">
+                  VAT inclusive
+                </div>
+                <div className="text-xs text-gray-500 mt-1 text-center">
+                  Monetary contributions to savings and insurance excluded
+                </div>
               </div>
               
               <div className="package-card-footer">
