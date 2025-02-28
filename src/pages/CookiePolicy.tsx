@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 
 const CookiePolicy = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-workplace-beige/30">
       <div className="container mx-auto py-16 px-4">
         <div className="mb-6">
           <Link to="/">
-            <Button variant="ghost" className="flex items-center gap-2 text-workplace-purple">
+            <Button variant="ghost" className="flex items-center gap-2 text-workplace-maroon">
               <ArrowLeft className="h-4 w-4" />
               Back to Home
             </Button>
@@ -53,7 +53,7 @@ const CookiePolicy = () => {
               For questions, reach out to{" "}
               <a 
                 href="mailto:dennis@mybento.net" 
-                className="text-workplace-purple hover:underline"
+                className="text-workplace-maroon hover:underline"
               >
                 dennis@mybento.net
               </a>.

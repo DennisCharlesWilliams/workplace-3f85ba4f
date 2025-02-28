@@ -65,6 +65,9 @@ export default {
 				},
 				workplace: {
 					purple: '#9b87f5',
+					maroon: '#800020', // New dark maroon color
+					beige: '#F5F5DC', // New beige color
+					khaki: '#8A9A5B', // New khaki green color
 					lightgreen: '#F2FCE2',
 					lightblue: '#D3E4FD',
 					gray: '#8E9196',
@@ -78,6 +81,9 @@ export default {
 					vividpurple: '#8B5CF6',
 					magentapink: '#D946EF'
 				}
+			},
+			fontFamily: {
+				serif: ['Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
