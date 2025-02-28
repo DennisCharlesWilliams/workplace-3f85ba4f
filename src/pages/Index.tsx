@@ -418,7 +418,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Have questions about our packages or need a customized solution? Reach out to us!
+              Have questions about our packages or need a customised solution? Reach out to us!
             </p>
           </div>
           
@@ -455,6 +455,38 @@ const Index = () => {
                   className="w-full p-3 border border-workplace-lightgray rounded-lg focus:outline-none focus:ring-2 focus:ring-workplace-purple/30"
                   placeholder="Your Company"
                 />
+              </div>
+              
+              <div className="space-y-2">
+                <label htmlFor="companySize" className="text-sm font-medium">Size of Company</label>
+                <select
+                  id="companySize"
+                  className="w-full p-3 border border-workplace-lightgray rounded-lg focus:outline-none focus:ring-2 focus:ring-workplace-purple/30 bg-white"
+                >
+                  <option value="">Select company size</option>
+                  <option value="1-10">1-10</option>
+                  <option value="20-50">20-50</option>
+                  <option value="50-100">50-100</option>
+                  <option value="100-200">100-200</option>
+                  <option value="200-500">200-500</option>
+                  <option value="500+">500+</option>
+                </select>
+              </div>
+              
+              <div className="space-y-2">
+                <label htmlFor="payrollSystem" className="text-sm font-medium">Current Payroll System</label>
+                <select
+                  id="payrollSystem"
+                  className="w-full p-3 border border-workplace-lightgray rounded-lg focus:outline-none focus:ring-2 focus:ring-workplace-purple/30 bg-white"
+                >
+                  <option value="">Select your payroll system</option>
+                  <option value="None / Excel">None / Excel</option>
+                  <option value="SimplePay">SimplePay</option>
+                  <option value="Payspace">Payspace</option>
+                  <option value="KarbonPay">KarbonPay</option>
+                  <option value="Sage">Sage</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
               
               <div className="space-y-2">
