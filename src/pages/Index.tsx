@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Check, CheckCircle2, ChevronRight, Smartphone, Globe, Clock, Calendar, CreditCard, Users, Building, FileText, Shield, Heart, Wallet, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -510,7 +511,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-gray-50 py-12 px-4 border-t border-workplace-lightgray">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-workplace-purple to-purple-700">Workplace</h3>
               <p className="text-gray-600 mt-4">The easy and affordable HR and benefits hub that scales with your company.</p>
@@ -523,6 +524,16 @@ const Index = () => {
                 <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Expense Claims</a></li>
                 <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Benefits Administration</a></li>
                 <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Employee Support</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4">Company</h4>
+              <ul className="space-y-2 text-gray-600">
+                <li><Link to="/about-us" className="hover:text-workplace-purple transition-colors">About Us</Link></li>
+                <li><Link to="/privacy-policy" className="hover:text-workplace-purple transition-colors">Privacy Policy</Link></li>
+                <li><Link to="/terms-of-service" className="hover:text-workplace-purple transition-colors">Terms of Service</Link></li>
+                <li><Link to="/cookie-policy" className="hover:text-workplace-purple transition-colors">Cookie Policy</Link></li>
               </ul>
             </div>
           </div>
