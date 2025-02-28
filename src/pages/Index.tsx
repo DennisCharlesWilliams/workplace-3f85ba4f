@@ -105,49 +105,54 @@ const Index = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-workplace-beige/60 via-white to-workplace-khaki/20"></div>
         </div>
         <div className="container mx-auto relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-              Simple, Fast & Affordable Leave & Benefits for Growing Teams
-            </h1>
-            
-            <p className="text-lg md:text-xl text-gray-600 mb-6">
-              The no-fuss solution to streamline leave and benefit claims - get started today with minimal effort.
-            </p>
-            
-            {/* Added image here */}
-            <div className="mx-auto w-60 md:w-72 mb-8">
-              <img 
-                src="/lovable-uploads/1b85f901-bd2c-4c9d-8fbb-ca8796b44396.png" 
-                alt="Person with heart illustration" 
-                className="w-full h-auto"
-              />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            {/* Left Column - Image */}
+            <div className="order-2 md:order-1 flex justify-center md:justify-start">
+              <div className="w-60 md:w-80 lg:w-96">
+                <img 
+                  src="/lovable-uploads/1b85f901-bd2c-4c9d-8fbb-ca8796b44396.png" 
+                  alt="Person with heart illustration" 
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
             
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-12">
-              <Button className="w-full md:w-auto bg-workplace-maroon hover:bg-workplace-maroon/90 transition-all text-white px-8 py-6 text-lg rounded-xl" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>
-                Start Free Trial
-              </Button>
+            {/* Right Column - Text */}
+            <div className="order-1 md:order-2 text-center md:text-right">
+              <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
+                Simple, Fast & Affordable Leave & Benefits for Growing Teams
+              </h1>
               
-              <Button variant="outline" className="w-full md:w-auto border-workplace-maroon text-workplace-maroon hover:bg-workplace-maroon/5 px-8 py-6 text-lg rounded-xl" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>
-                Book a Demo <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
+              <p className="text-lg md:text-xl text-gray-600 mb-8">
+                The no-fuss solution to streamline leave and benefit claims - get started today with minimal effort.
+              </p>
+              
+              <div className="flex flex-col md:flex-row justify-center md:justify-end items-center gap-4 mb-12">
+                <Button className="w-full md:w-auto bg-workplace-maroon hover:bg-workplace-maroon/90 transition-all text-white px-8 py-6 text-lg rounded-xl" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>
+                  Start Free Trial
+                </Button>
+                
+                <Button variant="outline" className="w-full md:w-auto border-workplace-maroon text-workplace-maroon hover:bg-workplace-maroon/5 px-8 py-6 text-lg rounded-xl" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>
+                  Book a Demo <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-gray-600 mt-4">
+            <div className="flex items-center">
+              <Smartphone className="h-5 w-5 mr-2 text-workplace-maroon" />
+              <span>Mobile friendly</span>
             </div>
             
-            <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-gray-600">
-              <div className="flex items-center">
-                <Smartphone className="h-5 w-5 mr-2 text-workplace-maroon" />
-                <span>Mobile friendly</span>
-              </div>
-              
-              <div className="flex items-center">
-                <Globe className="h-5 w-5 mr-2 text-workplace-maroon" />
-                <span>Built for South African Businesses</span>
-              </div>
-              
-              <div className="flex items-center">
-                <Zap className="h-5 w-5 mr-2 text-workplace-maroon" />
-                <span>Cut 90% of manual effort</span>
-              </div>
+            <div className="flex items-center">
+              <Globe className="h-5 w-5 mr-2 text-workplace-maroon" />
+              <span>Built for South African Businesses</span>
+            </div>
+            
+            <div className="flex items-center">
+              <Zap className="h-5 w-5 mr-2 text-workplace-maroon" />
+              <span>Cut 90% of manual effort</span>
             </div>
           </div>
         </div>
