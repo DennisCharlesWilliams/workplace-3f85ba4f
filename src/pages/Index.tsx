@@ -225,6 +225,10 @@ const Index = () => {
                 <ul className="space-y-3">
                   <li className="feature-list-item">
                     <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Self-service leave management</span>
+                  </li>
+                  <li className="feature-list-item">
+                    <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
                     <span>Payroll integration</span>
                   </li>
                   <li className="feature-list-item">
@@ -246,10 +250,6 @@ const Index = () => {
                   <li className="feature-list-item">
                     <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
                     <span>HR policies management</span>
-                  </li>
-                  <li className="feature-list-item">
-                    <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Self-service leave management</span>
                   </li>
                 </ul>
               </div>
@@ -300,11 +300,19 @@ const Index = () => {
                   </li>
                   <li className="feature-list-item">
                     <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Configure any perk</span>
+                    <span>Travel & Transport</span>
                   </li>
-                  <li className="feature-list-item invisible">
+                  <li className="feature-list-item">
                     <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Placeholder for alignment</span>
+                    <span>Office Supplies</span>
+                  </li>
+                  <li className="feature-list-item">
+                    <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Meals & Entertainment</span>
+                  </li>
+                  <li className="feature-list-item">
+                    <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Configure any perk</span>
                   </li>
                 </ul>
               </div>
@@ -352,10 +360,6 @@ const Index = () => {
                   <li className="feature-list-item">
                     <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
                     <span>Employee assistance program</span>
-                  </li>
-                  <li className="feature-list-item invisible">
-                    <CheckCircle2 className="h-4 w-4 text-workplace-purple mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Placeholder for alignment</span>
                   </li>
                 </ul>
               </div>
