@@ -520,10 +520,10 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Features</h4>
               <ul className="space-y-2 text-gray-600">
-                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Leave Management</a></li>
-                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Expense Claims</a></li>
-                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Benefits Administration</a></li>
-                <li><a href="mailto:dennis@mybento.net" className="hover:text-workplace-purple transition-colors">Employee Support</a></li>
+                <li><a href="#features" className="hover:text-workplace-purple transition-colors">Leave Management</a></li>
+                <li><a href="#features" className="hover:text-workplace-purple transition-colors">Expense Claims</a></li>
+                <li><a href="#features" className="hover:text-workplace-purple transition-colors">Benefits Administration</a></li>
+                <li><a href="#features" className="hover:text-workplace-purple transition-colors">Employee Support</a></li>
               </ul>
             </div>
             
