@@ -103,13 +103,6 @@ const Index = () => {
       <section className="pt-32 pb-16 px-4 md:pt-40 md:pb-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-workplace-beige/60 via-white to-workplace-khaki/20"></div>
-          <div className="absolute right-0 md:right-10 top-1/2 transform -translate-y-1/2 opacity-20 md:opacity-30 w-full md:w-1/3 h-auto">
-            <img 
-              src="/lovable-uploads/52e42430-83f2-40b7-b85f-ab0ae3c3cc3c.png" 
-              alt="Person dealing with paperwork" 
-              className="w-full h-auto"
-            />
-          </div>
         </div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
