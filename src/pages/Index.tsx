@@ -1,8 +1,9 @@
+
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Check, CheckCircle2, ChevronRight, Smartphone, Globe, Clock, Calendar, CreditCard, Users, Building, FileText, Shield, Heart, Wallet, Zap, ChevronLeft, Quote, Star, ArrowLeft, ArrowRight, Award, Trophy } from "lucide-react";
+import { Check, CheckCircle2, ChevronRight, Smartphone, Globe, Clock, Calendar, CreditCard, Users, Building, FileText, Shield, Heart, Wallet, Zap, ChevronLeft, Quote, Star, ArrowLeft, ArrowRight, Award, Trophy, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
