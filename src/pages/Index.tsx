@@ -1,9 +1,8 @@
-
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Check, CheckCircle2, ChevronRight, Smartphone, Globe, Clock, Calendar, CreditCard, Users, Building, FileText, Shield, Heart, Wallet, Zap, ChevronLeft, Quote, Star, ArrowLeft, ArrowRight } from "lucide-react";
+import { Check, CheckCircle2, ChevronRight, Smartphone, Globe, Clock, Calendar, CreditCard, Users, Building, FileText, Shield, Heart, Wallet, Zap, ChevronLeft, Quote, Star, ArrowLeft, ArrowRight, Award, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -108,7 +107,45 @@ const Index = () => {
       }
     ]
   ];
-  
+
+  const awards = [
+    {
+      title: "Next176 Invests in Bento",
+      description: "Empowering Bento to Enhance Employee Benefits for SMEs Across Africa",
+      icon: "Award"
+    },
+    {
+      title: "AlphaCode Incubate Winner",
+      description: "Recipient of grant funding from South Africa's leading fintech incubator.",
+      icon: "Trophy"
+    },
+    {
+      title: "Innovation Bridge Awardee",
+      description: "Selected for funding and support to drive innovation and growth.",
+      icon: "Award"
+    },
+    {
+      title: "Featured at Startup Club ZA",
+      description: "2023's Startup of the Year Runner-up, nominated by South Africa's leading tech startup community.",
+      icon: "Trophy"
+    },
+    {
+      title: "Funded by The World Bank",
+      description: "Proud partner in fostering global economic development.",
+      icon: "Award"
+    },
+    {
+      title: "SAFT Most Innovative Idea Winner",
+      description: "Awarded for pioneering solutions in digital employee benefits for SMEs.",
+      icon: "Trophy"
+    },
+    {
+      title: "HeavyChef Top 5 Most Exciting Startups Award",
+      description: "Nominated for 2024's Top 5 Startups by HeavyChef, Daily Maverick, SAFT, and Hasso Plattner d-school.",
+      icon: "Award"
+    }
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -131,7 +168,7 @@ const Index = () => {
     
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   const isSectionVisible = (id: string) => visibleSections.has(id);
 
   const nextTestimonial = () => {
@@ -675,6 +712,35 @@ const Index = () => {
                 <ArrowRight className="h-6 w-6" />
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="recognition" className={`py-16 md:py-24 px-4 bg-workplace-beige/30 ${isSectionVisible('recognition') ? 'section-fade' : 'opacity-0'}`}>
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">Recognition & Partnerships</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Our journey has been recognized by industry leaders and partners
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {awards.map((award, index) => (
+              <div 
+                key={index}
+                className={`bg-white rounded-xl shadow-sm p-6 border border-workplace-beige/40 transition-all hover:shadow-md hover:border-workplace-maroon/30 ${isSectionVisible('recognition') ? `section-fade section-fade-delay-${index % 4 + 1}` : 'opacity-0'}`}
+              >
+                <div className="flex flex-col items-center text-center">
+                  {award.icon === "Award" ? 
+                    <Award className="h-12 w-12 text-workplace-maroon mb-4" /> : 
+                    <Trophy className="h-12 w-12 text-workplace-maroon mb-4" />
+                  }
+                  <h3 className="text-xl font-semibold mb-2">{award.title}</h3>
+                  <p className="text-gray-600">{award.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
