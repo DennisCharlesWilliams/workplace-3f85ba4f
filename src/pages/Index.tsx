@@ -1,4 +1,4 @@
-<lov-code>
+
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -634,4 +634,107 @@ const Index = () => {
                           </span>
                         </div>
                         <div>
-                          <p className="font-medium text-gray-9
+                          <p className="font-medium text-gray-900">{testimonial.author}</p>
+                          <p className="text-sm text-gray-600">{testimonial.position}, {testimonial.company}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="flex justify-between items-center mt-8">
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border-workplace-maroon text-workplace-maroon"
+                onClick={prevTestimonial}
+              >
+                <ArrowLeft className="h-6 w-6" />
+              </Button>
+              
+              <div className="flex space-x-2">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`w-3 h-3 rounded-full ${
+                      activeTestimonial === index ? 'bg-workplace-maroon' : 'bg-gray-300'
+                    }`}
+                    onClick={() => goToTestimonial(index)}
+                  />
+                ))}
+              </div>
+              
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border-workplace-maroon text-workplace-maroon"
+                onClick={nextTestimonial}
+              >
+                <ArrowRight className="h-6 w-6" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="py-16 md:py-24 bg-workplace-maroon/5 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your HR?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Get started today and see the difference in your team's productivity and happiness
+            </p>
+          </div>
+          
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+            <Button className="w-full md:w-auto bg-workplace-maroon hover:bg-workplace-maroon/90 text-white px-8 py-6 text-lg" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>
+              Start Free Trial
+            </Button>
+            
+            <Button variant="outline" className="w-full md:w-auto border-workplace-maroon text-workplace-maroon hover:bg-workplace-maroon/5 px-8 py-6 text-lg" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>
+              Book a Demo
+            </Button>
+          </div>
+        </div>
+      </section>
+      
+      <footer className="bg-gray-50 py-12 px-4">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="mb-6 md:mb-0">
+              <div className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-workplace-maroon to-workplace-maroon/70">Workplace</div>
+              <p className="text-sm text-gray-500 mt-2">
+                Simple, Fast & Affordable HR for Growing Teams
+              </p>
+            </div>
+            
+            <div className="flex flex-col md:flex-row gap-8">
+              <div>
+                <h4 className="font-medium mb-2">Contact</h4>
+                <p className="text-sm text-gray-500">dennis@mybento.net</p>
+              </div>
+              
+              <div>
+                <h4 className="font-medium mb-2">Legal</h4>
+                <div className="flex flex-col gap-1">
+                  <Link to="/privacy-policy" className="text-sm text-gray-500 hover:text-workplace-maroon">Privacy Policy</Link>
+                  <Link to="/terms-of-service" className="text-sm text-gray-500 hover:text-workplace-maroon">Terms of Service</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <Separator className="my-8" />
+          
+          <div className="text-center text-xs text-gray-400">
+            &copy; {new Date().getFullYear()} Workplace by MyBento. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;
