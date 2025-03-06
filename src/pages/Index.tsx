@@ -1,3 +1,4 @@
+<lov-code>
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -327,91 +328,6 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="testimonials" className={`py-16 md:py-24 px-4 ${isSectionVisible('testimonials') ? 'section-fade' : 'opacity-0'}`}>
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">What Our Customers Say</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Hear from businesses who've transformed their HR processes with Workplace
-            </p>
-          </div>
-          
-          <div className="relative max-w-4xl mx-auto" ref={testimonialRef}>
-            <div className="overflow-hidden">
-              <div 
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${activeTestimonial * 100}%)` }}
-              >
-                {testimonials.map((testimonial, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-4">
-                    <div className="bg-white rounded-xl shadow-sm p-8 border border-workplace-beige">
-                      <div className="flex items-start mb-6">
-                        <Quote className="h-10 w-10 text-workplace-maroon opacity-40 mr-4" />
-                        <div className="flex flex-col">
-                          <div className="flex mb-2">
-                            {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <p className="text-lg leading-relaxed mb-6 text-gray-700 italic">
-                        "{testimonial.quote}"
-                      </p>
-                      
-                      <div className="flex items-center">
-                        <div className="bg-workplace-maroon/20 w-12 h-12 rounded-full flex items-center justify-center mr-4">
-                          <span className="text-workplace-maroon font-semibold text-lg">
-                            {testimonial.author.charAt(0)}
-                          </span>
-                        </div>
-                        <div>
-                          <p className="font-medium text-gray-900">{testimonial.author}</p>
-                          <p className="text-sm text-gray-600">{testimonial.position}, {testimonial.company}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div className="flex justify-between items-center mt-8">
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full border-workplace-maroon text-workplace-maroon"
-                onClick={prevTestimonial}
-              >
-                <ChevronLeft className="h-6 w-6" />
-              </Button>
-              
-              <div className="flex space-x-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`w-3 h-3 rounded-full ${
-                      activeTestimonial === index ? 'bg-workplace-maroon' : 'bg-gray-300'
-                    }`}
-                    onClick={() => goToTestimonial(index)}
-                  />
-                ))}
-              </div>
-              
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full border-workplace-maroon text-workplace-maroon"
-                onClick={nextTestimonial}
-              >
-                <ChevronRight className="h-6 w-6" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="packages" className={`py-16 md:py-24 px-4 bg-workplace-beige/30 ${isSectionVisible('packages') ? 'section-fade' : 'opacity-0'}`}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -678,157 +594,44 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-gradient-to-r from-workplace-maroon/10 to-workplace-khaki/20 relative overflow-hidden">
-        <div className="container mx-auto relative z-10">
-          <div className="glass-panel max-w-4xl mx-auto rounded-2xl p-10 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to transform your HR processes?</h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
-              Join progressive South African businesses already using Workplace to simplify their HR and benefits management.
-            </p>
-            <div className="flex flex-col md:flex-row justify-center gap-4">
-              <Button className="bg-workplace-maroon hover:bg-workplace-maroon/90 text-white px-8" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>Get Started Today</Button>
-              <Button variant="outline" className="border-workplace-maroon text-workplace-maroon hover:bg-workplace-maroon hover:text-white" onClick={() => window.location.href = 'mailto:dennis@mybento.net'}>
-                Schedule a Demo
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" className={`py-16 md:py-24 px-4 ${isSectionVisible('contact') ? 'section-fade' : 'opacity-0'}`}>
+      <section id="testimonials" className={`py-16 md:py-24 px-4 ${isSectionVisible('testimonials') ? 'section-fade' : 'opacity-0'}`}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
+            <h2 className="text-3xl font-bold mb-4">What Our Customers Say</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Have questions about our packages or need a customised solution? Reach out to us!
+              Hear from businesses who've transformed their HR processes with Workplace
             </p>
           </div>
           
-          <div className="max-w-lg mx-auto bg-white rounded-xl shadow-sm p-8 border border-workplace-beige">
-            <form className="space-y-6" onSubmit={(e) => {
-              e.preventDefault();
-              window.location.href = 'mailto:dennis@mybento.net';
-            }}>
-              <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-medium">Your Name</label>
-                <input
-                  id="name"
-                  type="text"
-                  className="w-full p-3 border border-workplace-beige rounded-lg focus:outline-none focus:ring-2 focus:ring-workplace-maroon/30"
-                  placeholder="Full Name"
-                />
-              </div>
-              
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium">Email Address</label>
-                <input
-                  id="email"
-                  type="email"
-                  className="w-full p-3 border border-workplace-beige rounded-lg focus:outline-none focus:ring-2 focus:ring-workplace-maroon/30"
-                  placeholder="your@email.com"
-                />
-              </div>
-              
-              <div className="space-y-2">
-                <label htmlFor="company" className="text-sm font-medium">Company Name</label>
-                <input
-                  id="company"
-                  type="text"
-                  className="w-full p-3 border border-workplace-beige rounded-lg focus:outline-none focus:ring-2 focus:ring-workplace-maroon/30"
-                  placeholder="Your Company"
-                />
-              </div>
-              
-              <div className="space-y-2">
-                <label htmlFor="companySize" className="text-sm font-medium">Size of Company</label>
-                <select
-                  id="companySize"
-                  className="w-full p-3 border border-workplace-beige rounded-lg focus:outline-none focus:ring-2 focus:ring-workplace-maroon/30 bg-white"
-                >
-                  <option value="">Select company size</option>
-                  <option value="1-10">1-10</option>
-                  <option value="20-50">20-50</option>
-                  <option value="50-100">50-100</option>
-                  <option value="100-200">100-200</option>
-                  <option value="200-500">200-500</option>
-                  <option value="500+">500+</option>
-                </select>
-              </div>
-              
-              <div className="space-y-2">
-                <label htmlFor="payrollSystem" className="text-sm font-medium">Current Payroll System</label>
-                <select
-                  id="payrollSystem"
-                  className="w-full p-3 border border-workplace-beige rounded-lg focus:outline-none focus:ring-2 focus:ring-workplace-maroon/30 bg-white"
-                >
-                  <option value="">Select your payroll system</option>
-                  <option value="None / Excel">None / Excel</option>
-                  <option value="SimplePay">SimplePay</option>
-                  <option value="Payspace">Payspace</option>
-                  <option value="KarbonPay">KarbonPay</option>
-                  <option value="Sage">Sage</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-              
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium">Message</label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full p-3 border border-workplace-beige rounded-lg focus:outline-none focus:ring-2 focus:ring-workplace-maroon/30"
-                  placeholder="How can we help you?"
-                ></textarea>
-              </div>
-              
-              <Button type="submit" className="w-full bg-workplace-maroon hover:bg-workplace-maroon/90 text-white py-6">
-                Send Message
-              </Button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <footer className="bg-workplace-beige/40 py-12 px-4 border-t border-workplace-beige">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-workplace-maroon to-workplace-maroon/80">Workplace</h3>
-              <p className="text-gray-600 mt-4">The easy and affordable HR and benefits hub that scales with your company.</p>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Features</h4>
-              <ul className="space-y-2 text-gray-600">
-                <li><a href="#features" className="hover:text-workplace-maroon transition-colors">Leave Management</a></li>
-                <li><a href="#features" className="hover:text-workplace-maroon transition-colors">Expense Claims</a></li>
-                <li><a href="#features" className="hover:text-workplace-maroon transition-colors">Benefits Administration</a></li>
-                <li><a href="#features" className="hover:text-workplace-maroon transition-colors">Employee Support</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-600">
-                <li><Link to="/about-us" className="hover:text-workplace-maroon transition-colors">About Us</Link></li>
-                <li><Link to="/privacy-policy" className="hover:text-workplace-maroon transition-colors">Privacy Policy</Link></li>
-                <li><Link to="/terms-of-service" className="hover:text-workplace-maroon transition-colors">Terms of Service</Link></li>
-                <li><Link to="/cookie-policy" className="hover:text-workplace-maroon transition-colors">Cookie Policy</Link></li>
-              </ul>
-            </div>
-          </div>
-          
-          <Separator className="my-8" />
-          
-          <div className="flex justify-center">
-            <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} Workplace. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default Index;
+          <div className="relative max-w-4xl mx-auto" ref={testimonialRef}>
+            <div className="overflow-hidden">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${activeTestimonial * 100}%)` }}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <div key={index} className="w-full flex-shrink-0 px-4">
+                    <div className="bg-white rounded-xl shadow-sm p-8 border border-workplace-beige">
+                      <div className="flex items-start mb-6">
+                        <Quote className="h-10 w-10 text-workplace-maroon opacity-40 mr-4" />
+                        <div className="flex flex-col">
+                          <div className="flex mb-2">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <p className="text-lg leading-relaxed mb-6 text-gray-700 italic">
+                        "{testimonial.quote}"
+                      </p>
+                      
+                      <div className="flex items-center">
+                        <div className="bg-workplace-maroon/20 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                          <span className="text-workplace-maroon font-semibold text-lg">
+                            {testimonial.author.charAt(0)}
+                          </span>
+                        </div>
+                        <div>
+                          <p className="font-medium text-gray-9
