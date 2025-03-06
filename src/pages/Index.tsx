@@ -1,16 +1,17 @@
-
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Check, CheckCircle2, ChevronRight, Smartphone, Globe, Clock, Calendar, CreditCard, Users, Building, FileText, Shield, Heart, Wallet, Zap, ChevronLeft, Quote, Star } from "lucide-react";
+import { Check, CheckCircle2, ChevronRight, Smartphone, Globe, Clock, Calendar, CreditCard, Users, Building, FileText, Shield, Heart, Wallet, Zap, ChevronLeft, Quote, Star, ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
   const [scrolled, setScrolled] = useState(false);
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [activePartnerCategory, setActivePartnerCategory] = useState(0);
   const testimonialRef = useRef<HTMLDivElement>(null);
+  const partnerCategoriesRef = useRef<HTMLDivElement>(null);
   
   const testimonials = [
     {
@@ -39,11 +40,78 @@ const Index = () => {
     }
   ];
   
+  const partnerCategories = [
+    [
+      {
+        category: "Retirement",
+        providers: "Sygnia Signature RA Funds",
+        price: "Starting from R500 p/employee/month"
+      },
+      {
+        category: "Medical Aid",
+        providers: "Discovery Medical Aid",
+        price: "Starting from R1180 per employee per month"
+      },
+      {
+        category: "Employee Assistance Program",
+        providers: "Lyra Health (EAP)",
+        price: "From R39 p/employee/month",
+        description: "Hotline and Apps to support Mental health, family support, Legal and Financial Advice."
+      }
+    ],
+    [
+      {
+        category: "Savings & Investments",
+        providers: "Sygnia, Allan Gray",
+        price: "Starting from R500 p/employee/month"
+      },
+      {
+        category: "Medical Insurance",
+        providers: "Momentum & Discovery Primary Care",
+        price: "Starting from R280 per employee per month"
+      },
+      {
+        category: "Health Care - Mobile and Telemedicine",
+        providers: "Kena Health (Telemedicine), Zoie Health (WhatsApp Counselling)",
+        price: "From R39 p/employee/month"
+      }
+    ],
+    [
+      {
+        category: "Holistic Wellbeing",
+        providers: "Strove (Physical and mental wellness), SoSerene (holistic wellbeing)",
+        price: "From R160 p/employee/month",
+        description: "Nutrition, Mental and Physical wellness"
+      },
+      {
+        category: "Mental Health Counselling",
+        providers: "Ollie Health (Online 1-on-1 sessions)",
+        price: "From R300 per session"
+      },
+      {
+        category: "Financial Management",
+        providers: "FinWise (Personal finance tools)",
+        price: "Free or from R68 p/month"
+      }
+    ],
+    [
+      {
+        category: "Career Growth",
+        providers: "Coursera, Udemy and other online learning platforms",
+        price: "Budget per month, quarter or year"
+      },
+      {
+        category: "More integrations continuously added",
+        providers: "Transport, Retail discounts, Equipment - the possibilities are endless",
+        price: ""
+      }
+    ]
+  ];
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
       
-      // Check which sections are visible
       document.querySelectorAll('section[id]').forEach((section) => {
         const rect = section.getBoundingClientRect();
         const inView = (
@@ -77,9 +145,20 @@ const Index = () => {
     setActiveTestimonial(index);
   };
 
+  const nextPartnerCategory = () => {
+    setActivePartnerCategory((prev) => (prev + 1) % partnerCategories.length);
+  };
+
+  const prevPartnerCategory = () => {
+    setActivePartnerCategory((prev) => (prev - 1 + partnerCategories.length) % partnerCategories.length);
+  };
+
+  const goToPartnerCategory = (index: number) => {
+    setActivePartnerCategory(index);
+  };
+
   return (
     <div className="min-h-screen">
-      {/* Header */}
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-workplace-beige/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
@@ -99,14 +178,12 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 md:pt-40 md:pb-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-workplace-beige/60 via-white to-workplace-khaki/20"></div>
         </div>
         <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            {/* Left Column - Text */}
             <div className="order-1 text-left">
               <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
                 Simple, Fast & Affordable Leave & Benefits for Growing Teams
@@ -127,7 +204,6 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Right Column - Image */}
             <div className="order-2 md:order-2 flex justify-center md:justify-end">
               <div className="w-64 md:w-96 lg:w-[450px]">
                 <img 
@@ -158,7 +234,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
       <section id="features" className={`py-16 md:py-24 bg-workplace-beige/30 px-4 ${isSectionVisible('features') ? 'section-fade' : 'opacity-0'}`}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -169,7 +244,6 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Feature 1 */}
             <div className={`feature-card ${isSectionVisible('features') ? 'section-fade section-fade-delay-1' : 'opacity-0'}`}>
               <Calendar className="h-10 w-10 text-workplace-maroon mb-4" />
               <h3 className="text-xl font-semibold mb-2">Leave Management</h3>
@@ -190,7 +264,6 @@ const Index = () => {
               </ul>
             </div>
             
-            {/* Feature 2 */}
             <div className={`feature-card ${isSectionVisible('features') ? 'section-fade section-fade-delay-2' : 'opacity-0'}`}>
               <CreditCard className="h-10 w-10 text-workplace-maroon mb-4" />
               <h3 className="text-xl font-semibold mb-2">Expense & Benefits</h3>
@@ -211,7 +284,6 @@ const Index = () => {
               </ul>
             </div>
             
-            {/* Feature 3 */}
             <div className={`feature-card ${isSectionVisible('features') ? 'section-fade section-fade-delay-3' : 'opacity-0'}`}>
               <Heart className="h-10 w-10 text-workplace-maroon mb-4" />
               <h3 className="text-xl font-semibold mb-2">Employee Support</h3>
@@ -232,7 +304,6 @@ const Index = () => {
               </ul>
             </div>
             
-            {/* Feature 4 - New Module */}
             <div className={`feature-card ${isSectionVisible('features') ? 'section-fade section-fade-delay-4' : 'opacity-0'}`}>
               <Wallet className="h-10 w-10 text-workplace-maroon mb-4" />
               <h3 className="text-xl font-semibold mb-2">Holistic array of benefits</h3>
@@ -256,7 +327,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
       <section id="testimonials" className={`py-16 md:py-24 px-4 ${isSectionVisible('testimonials') ? 'section-fade' : 'opacity-0'}`}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -307,7 +377,6 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Carousel Navigation */}
             <div className="flex justify-between items-center mt-8">
               <Button
                 variant="outline"
@@ -343,7 +412,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Packages Section */}
       <section id="packages" className={`py-16 md:py-24 px-4 bg-workplace-beige/30 ${isSectionVisible('packages') ? 'section-fade' : 'opacity-0'}`}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -354,7 +422,6 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Base Package */}
             <div className={`package-card ${isSectionVisible('packages') ? 'section-fade section-fade-delay-1' : 'opacity-0'}`}>
               <div className="package-card-header">
                 <h3 className="font-semibold text-gray-500 mb-1">Get the basics</h3>
@@ -408,7 +475,6 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Plus Package */}
             <div className={`package-card relative ${isSectionVisible('packages') ? 'section-fade section-fade-delay-2' : 'opacity-0'}`}>
               <div className="absolute top-0 right-0 bg-workplace-maroon text-white px-3 py-1 text-xs font-medium">
                 Popular
@@ -474,7 +540,6 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Extra Package */}
             <div className={`package-card ${isSectionVisible('packages') ? 'section-fade section-fade-delay-3' : 'opacity-0'}`}>
               <div className="package-card-header">
                 <h3 className="font-semibold text-gray-500 mb-1">Empower employees</h3>
@@ -538,7 +603,81 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      <section id="benefits-partners" className={`py-16 md:py-24 px-4 ${isSectionVisible('benefits-partners') ? 'section-fade' : 'opacity-0'}`}>
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">Benefits Partners</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Add-Ons & Partner Benefits to provide a holistic WorkLife for your employees (available via MyBento today)
+            </p>
+          </div>
+          
+          <div className="relative max-w-5xl mx-auto" ref={partnerCategoriesRef}>
+            <div className="overflow-hidden">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${activePartnerCategory * 100}%)` }}
+              >
+                {partnerCategories.map((categoryGroup, groupIndex) => (
+                  <div key={groupIndex} className="w-full flex-shrink-0 px-4">
+                    <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
+                      {categoryGroup.map((category, index) => (
+                        <div key={index} className="bg-white rounded-xl shadow-sm p-6 border border-workplace-beige/40 transition-all hover:shadow-md hover:border-workplace-maroon/30">
+                          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                            <div>
+                              <h3 className="text-xl font-semibold mb-1">{category.category}</h3>
+                              {category.description && (
+                                <p className="text-sm text-gray-600 mb-2">{category.description}</p>
+                              )}
+                              <p className="text-gray-700">{category.providers}</p>
+                            </div>
+                            <div className="mt-2 md:mt-0">
+                              <p className="font-semibold text-workplace-maroon">{category.price}</p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="flex justify-between items-center mt-8">
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border-workplace-maroon text-workplace-maroon"
+                onClick={prevPartnerCategory}
+              >
+                <ArrowLeft className="h-6 w-6" />
+              </Button>
+              
+              <div className="flex space-x-2">
+                {partnerCategories.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`w-3 h-3 rounded-full ${
+                      activePartnerCategory === index ? 'bg-workplace-maroon' : 'bg-gray-300'
+                    }`}
+                    onClick={() => goToPartnerCategory(index)}
+                  />
+                ))}
+              </div>
+              
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border-workplace-maroon text-workplace-maroon"
+                onClick={nextPartnerCategory}
+              >
+                <ArrowRight className="h-6 w-6" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 px-4 bg-gradient-to-r from-workplace-maroon/10 to-workplace-khaki/20 relative overflow-hidden">
         <div className="container mx-auto relative z-10">
           <div className="glass-panel max-w-4xl mx-auto rounded-2xl p-10 text-center">
@@ -556,7 +695,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className={`py-16 md:py-24 px-4 ${isSectionVisible('contact') ? 'section-fade' : 'opacity-0'}`}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -651,7 +789,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-workplace-beige/40 py-12 px-4 border-t border-workplace-beige">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
