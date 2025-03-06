@@ -19,6 +19,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -65,9 +68,9 @@ export default {
 				},
 				workplace: {
 					purple: '#9b87f5',
-					maroon: '#800020', // New dark maroon color
-					beige: '#F5F5DC', // New beige color
-					khaki: '#8A9A5B', // New khaki green color
+					maroon: '#15BA9C', // Updated to the new teal color
+					beige: '#F5F5DC', // Keeping beige color
+					khaki: '#D47DA7', // Updated to the new pink color
 					lightgreen: '#F2FCE2',
 					lightblue: '#D3E4FD',
 					gray: '#8E9196',
